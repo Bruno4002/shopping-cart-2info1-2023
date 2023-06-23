@@ -2,6 +2,10 @@
 import { carrinho, removerItemCarrinho, atualizaQuantidadeItem } from '@/_data/carrinho.js'
 import MButton from './MButton.vue'
 import CarrinhoVazio from './CarrinhoVazio.vue'
+import DeleteEmpty from 'vue-material-design-icons/DeleteEmpty.vue'
+import Delete from 'vue-material-design-icons/Delete.vue'
+import CheckOutline from 'vue-material-design-icons/CheckOutline.vue';
+import MicrosoftXbox from 'vue-material-design-icons/MicrosoftXbox.vue'
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
@@ -41,10 +45,10 @@ function formatarPreco(preco) {
           </div>
         </div>
       </div>
-      <m-button text="Limpar carrinho" />
-      <m-button text="Finalizar compra" />
-      <m-button text="Continuar comprando" />
-      <m-button text="Salvar" />
+      <m-button>  <delete-empty/> </m-button>
+      <m-button>  <Delete/> </m-button>
+      <m-button>  <CheckOutline/> </m-button>
+      <m-button>  <MicrosoftXbox/>  </m-button>
       <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
     </div>
   </div>
